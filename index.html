@@ -23,6 +23,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
   <!-- =======================================================
     Theme Name: DevFolio
@@ -333,9 +334,9 @@
       <div class="row">
         <div class="col-md-4">
           <div class="work-box">
-            <a href="./img/Screenshot (3).png" data-lightbox="gallery-mf">
+            <a href="./img/vscode-2.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="./img/Screenshot (3).png" alt="" class="img-fluid">
+                <img src="./img/vscode-2.png" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -359,7 +360,7 @@
           <div class="work-box">
             <a href=" https://gurupriyan7.github.io/Discord/" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="./img/discode.png" alt="" class="img-fluid">
+                <img src="./img/discode 3.png" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -383,7 +384,7 @@
           <div class="work-box">
             <a href="https://github.com/gurupriyan7/vscode" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="./img/primevideo.png" alt="" class="img-fluid">
+                <img src="./img/prime video6.png" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -540,7 +541,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-single.html"><img src="./img/plus-two.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-single.html"><img src="./img/AIEducation.png" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -568,7 +569,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href=""><img src="./img/itii.png" alt="" class="img-fluid"></a>
+              <a href=""><img src="./img/AIEducation.png" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -595,7 +596,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-single.html"><img src="./img/it back.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-single.html"><img src="./img/AIEducation.png" alt="" class="img-fluid"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -603,11 +604,11 @@
                   <h6 class="category">Web Design</h6>
                 </div>
               </div>
-              <h3 class="card-title"><a href="blog-single.html">Every great dream begins with a dreamer. ...</a></h3>
+              <h3 class="card-title"><a href="blog-single.html">web Development</a></h3>
               <p class="card-description">
-                
-              </p>
-            </div>
+               
+              </p> 
+            </div>Web Development
             <div class="card-footer">
               <div class="post-author">
                 <a href="#">
@@ -642,33 +643,38 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="https://script.google.com/macros/s/AKfycbzsz6zgFohu0D0SbhBkgcefElwNImmlgjp-9x6oIWv9he8_nv1UyEvgGBUB7B1BA9Nwwg/exec"
-
-                       method="post" role="form" class="contactForm">
+                      <form action="https://script.google.com/macros/s/AKfycbzuNr3p3TTlk213Zw7Jinck3wSiUpv1ZtXtr1VDOdbupGNZldMy7XZCgyHene1-jmMx/exec" method="post" role="form" class="contactForm" id="submit-form">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                      
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control" id="form_fname" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <span class="error_form" id="fname_error_message"></span>
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" class="form-control" name="form_email" id="form_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <span class="error_form" id="email_error_message"></span>
+
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                              <input type="text" class="form-control" name="form_subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                              <span class="error_form" id="subject_error_message"></span>
+
                               <div class="validation"></div>
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" id="form_message" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <span class="error_form" id="message_error_message"></span>
+
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -752,6 +758,82 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+<script>
+  $(function() {
+					$("#fname_error_message").hide();
+					$("#email_error_message").hide();
+					$("#subject_error_message").hide();
+					$("#message_error_message").hide();
+                   
+					var error_fname = false;
+					var error_email = false;
+					var error_subject = false;
+					var error_message = false;
+
+
+
+
+
+
+
+					
+					$("#form_fname").focusout(function (){
+						check_fname();
+					});
+							function check_fname(){
+								var pattern=  /^[a-zA-Z]*$/;
+								var fname = $("#form_fname").val()
+								if(pattern.test(fname) && fname!==''){
+									$("#fname_error_message").hide();
+									$("#form_fname").css("border_bottom","2px solid #34F458");
+								}
+								else{
+									$("#fname_error_message").html("Should contain only characters")
+									$("#fname_error_message").show();
+									$("#form_fname").css("border-bottom","2px solid #F90A0A");
+										error_fname=true;
+								}
+							}
+
+							function check_email(){
+								var pattern=  /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+								var email = $("#form_email").val();
+								if(pattern.test(email) && email!==''){
+									$("#email_error_message").hide();
+									$("#form_email").css("border_bottom","2px solid #34F458");
+								}
+								else{
+									$("#email_error_message").html("Invalid Email");
+									$("#email_error_message").show();
+									$("#form_email").css("border-bottom","2px solid #F90A0A");
+										error_fname=true;
+								}
+							}
+
+
+
+							$("#submit-form").submit(function(){ 
+								error_fname=false;
+								error_email=false;
+								error_subject=false;
+								error_message=false;
+								check_fname();
+								check_email();
+								
+								if(error_fname===false && error_email === false){
+									alert("Registration Successful");
+									return true;
+								}
+								else{
+									alert("please fill the form correctly");
+									return false;
+								}
+								
+							});
+				});
+  </script>
+
+
 
 </body>
 </html>
