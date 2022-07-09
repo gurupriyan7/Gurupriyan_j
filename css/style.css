@@ -1269,3 +1269,7 @@ footer .credits a {
     bottom: 15px;
   }
 }
+
+.error_form{
+  color: crimson!important;
+}
