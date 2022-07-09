@@ -834,32 +834,49 @@ form.addEventListener("submit",(e)=>{
     setTimeout(() => {
       nameMsg=[]
       nameErr.innerHTML=nameMsg.join("")
+      name.style.borderBottomWidth ="1px";
+    name.style.borderColor="grey"
     },4000);
+    name.style.borderBottomWidth ="3px";
+    name.style.borderColor="red"
+    
     nameErr.innerHTML=nameMsg.join("")
    }
    if(emailMsg.length>0&&emailMsg.length<2){
     setTimeout(() => {
       emailMsg=[]
       emailErr.innerHTML=emailMsg.join("")
+      email.style.borderBottomWidth ="1px";
+      email.style.borderColor="grey"
     },4000);
     e.preventDefault()
     emailErr.innerHTML=emailMsg.join("")
+    email.style.borderBottomWidth ="3px";
+    email.style.borderColor="red"
    }
    if(subMsg.length>0&&subMsg.length<2){
     e.preventDefault()
     setTimeout(() => {
       subMsg=[]
       subjectErr.innerHTML=subMsg.join("")
+      subject.style.borderBottomWidth ="1px";
+      subject.style.borderColor="grey"
     }, 4000);
     subjectErr.innerHTML=subMsg.join("")
+    subject.style.borderBottomWidth ="3px";
+    subject.style.borderColor="red"
    }
    if(msgMsg.length>0&&msgMsg.length<2){
     e.preventDefault()
     setTimeout(() => {
       msgMsg=[]
       messageErr.innerHTML=msgMsg.join("")
+      message.style.borderBottomWidth ="1px";
+      message.style.borderColor="grey"
     },4000);
     messageErr.innerHTML=msgMsg.join("")
+    message.style.borderBottomWidth ="3px";
+    message.style.borderColor="red"
    }
    if(nameMsg.length>1||emailMsg.length>1||subMsg.length>1||msgMsg.length>1){
           e.preventDefault()
