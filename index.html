@@ -823,33 +823,40 @@ form.addEventListener("submit",(e)=>{
     msgMsg.push("Please enter the message")
    }
 
-   if(nameMsg.length>0){
+   if(nameMsg.length>0&&nameMsg.length<2){
     e.preventDefault()
     setTimeout(() => {
-      nameErr.innerHTML=null
+      nameMsg=[]
+      nameErr.innerHTML=nameMsg.join("")
     },4000);
     nameErr.innerHTML=nameMsg.join("")
    }
-   if(emailMsg.length>0){
+   if(emailMsg.length>0&&emailMsg.length<2){
     setTimeout(() => {
-      emailErr.innerHTML=null
+      emailMsg=[]
+      emailErr.innerHTML=emailMsg.join("")
     },4000);
     e.preventDefault()
     emailErr.innerHTML=emailMsg.join("")
    }
-   if(subMsg.length>0){
+   if(subMsg.length>0&&subMsg.length<2){
     e.preventDefault()
     setTimeout(() => {
-      subjectErr.innerHTML=null
+      subMsg=[]
+      subjectErr.innerHTML=emailMsg.join("")
     }, 4000);
     subjectErr.innerHTML=emailMsg.join("")
    }
-   if(msgMsg.length>0){
+   if(msgMsg.length>0&&msgMsg.length<2){
     e.preventDefault()
     setTimeout(() => {
-      messageErr.innerHTML=null
+      msgMsg=[]
+      messageErr.innerHTML=msgMsg.join("")
     },4000);
     messageErr.innerHTML=msgMsg.join("")
+   }
+   if(nameMsg.length>1||emailMsg.length>1||subMsg.length>1||msgMsg.length>1){
+          e.preventDefault()
    }
 
    if(nameMsg.length==0&&emailMsg.length==0&&subMsg.length==0&&msgMsg.length==0){
