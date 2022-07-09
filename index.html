@@ -318,7 +318,7 @@ In this project there are 3 main sections USER,TRAINER&ADMIN(on progress)
       <div class="row">
         <div class="col-md-4">
           <div class="work-box">
-            <a href="https://github.com/gurupriyan7/FITTY" data-lightbox="gallery-mf">
+            <a href="./img/fitty.png" data-lightbox="gallery-mf">
               <div class="work-img">
                 <img src="./img/fitty.png" alt="" class="img-fluid">
               </div>
@@ -343,7 +343,7 @@ In this project there are 3 main sections USER,TRAINER&ADMIN(on progress)
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="https://github.com/gurupriyan7/Shopsy-" data-lightbox="gallery-mf">
+            <a href="./img/shopsy.png" data-lightbox="gallery-mf">
               <div class="work-img">
                 <img src="./img/shopsy.png" alt="" class="img-fluid">
               </div>
@@ -801,7 +801,7 @@ let nameErr= document.getElementById("fname_error_message")
 let emailErr= document.getElementById("email_error_message")
 let subjectErr= document.getElementById("subject_error_message")
 let messageErr= document.getElementById("message_error_message")
-let emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i; 
+let  validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 let nameMsg=[]
 let emailMsg=[]
@@ -818,6 +818,8 @@ form.addEventListener("submit",(e)=>{
 
    if(email.value==null||email.value==""){
     emailMsg.push("Please enter Your Email")
+   }else if(!validRegex.test(email.value)){
+    emailMsg.push("Invalid email Address")
    }
 
    if(subject.value==null||subject.value==""){
@@ -847,9 +849,9 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault()
     setTimeout(() => {
       subMsg=[]
-      subjectErr.innerHTML=emailMsg.join("")
+      subjectErr.innerHTML=subMsg.join("")
     }, 4000);
-    subjectErr.innerHTML=emailMsg.join("")
+    subjectErr.innerHTML=subMsg.join("")
    }
    if(msgMsg.length>0&&msgMsg.length<2){
     e.preventDefault()
