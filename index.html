@@ -962,6 +962,7 @@ form.addEventListener("submit",(e)=>{
    }
 
    if(nameMsg.length==0&&emailMsg.length==0&&subMsg.length==0&&msgMsg.length==0){
+    
                 e.preventDefault()
                 $.ajax({
                     url:"https://script.google.com/macros/s/AKfycbzuNr3p3TTlk213Zw7Jinck3wSiUpv1ZtXtr1VDOdbupGNZldMy7XZCgyHene1-jmMx/exec",
@@ -970,19 +971,19 @@ form.addEventListener("submit",(e)=>{
                     success:function (response){
                       success.innerHTML="Your message has been sent. Thank you!"
                         // alert("Form submitted successfully")
-                        setTimeout(() => {
-                        window.location.reload()
+                        // setTimeout(() => {
+                        // window.location.reload()
                           
-                        }, 3500);
+                        // }, 3500);
                         //window.location.href="https://google.com"
                     },
                     error:function (err){
                       success.innerHTML="Your message has been sent. Thank you!"
-                      setTimeout(() => {
-                        window.location.reload()
+                      // setTimeout(() => {
+                      //   window.location.reload()
                           
-                        }, 3500);
-                      console.log(err);
+                      //   }, 3500);
+                      console.log(err,"errir");
         
                     }
                 })
